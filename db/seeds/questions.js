@@ -1,4 +1,4 @@
-const questions = require('../../results/triviaQuestions3')
+const questions = require('../../results/triviaQuestions3.js')
 
 exports.seed = function(knex) {
   return knex('questions').del()
