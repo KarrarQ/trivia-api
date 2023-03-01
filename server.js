@@ -7,9 +7,14 @@ require('dotenv').config();
 const queries = require('./queries');
 
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 app.set('port', process.env.PORT || 3001);
+
+
+app.get("/", (request, response) => {
+    response.send("This is for the books yo.");
+});
 
 app.get('/api/v1/questions/all', (request, response) => {
   queries.getAllQuestions()

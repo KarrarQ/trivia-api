@@ -1,7 +1,8 @@
-const questions = require('../../results/triviaQuestions3.js')
+const questions = require('../../results/triviaQuestions.js')
 
 exports.seed = function(knex) {
-  return knex('questions').del()
+  return knex('questions')
+  .del()
   .then(() => {
     return knex.raw('ALTER SEQUENCE questions_id_seq RESTART WITH 1');
   })

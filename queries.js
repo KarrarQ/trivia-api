@@ -5,7 +5,7 @@ const database = require('knex')(connection);
 module.exports = {
   getAllQuestions() {
     // get 20 questions at random
-    let query = database('questions').select('*').orderByRaw('RANDOM()').limit(20);
+    let query = database('questions')
     return query
   },
   getQuestionsByCategory(request) {
